@@ -8,7 +8,6 @@ on:
     branches: [ "init" ]
   pull_request:
     branches: [ "init" ]
-  workflow_dispatch:    
 
 env:
   GOLANG_VERSION: 1.21.x
