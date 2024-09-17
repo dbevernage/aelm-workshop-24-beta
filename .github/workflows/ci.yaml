@@ -9,7 +9,7 @@ on:
   pull_request:
     branches: [ "init" ]
 
-environment:
+env:
   GOLANG_VERSION: 1.21.x
 
 jobs:
