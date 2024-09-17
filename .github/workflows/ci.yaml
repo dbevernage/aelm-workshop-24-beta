@@ -9,17 +9,21 @@ on:
   pull_request:
     branches: [ "init" ]
 
+environment:
+  GOLANG_VERSION: 1.21.x
+
 jobs:
+
 
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up Go
+    - name: Setup Go ${{ env.GOLANG_VERSION }}
       uses: actions/setup-go@v4
       with:
-        go-version: '1.20'
+        go-version: ${{ env.GOLANG_VERSION }}
 
     - name: Build
       run: go build -o ../bin/workshop -v ./...
